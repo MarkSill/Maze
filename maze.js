@@ -6,7 +6,7 @@ var maze = {
 	"use strict";
 
 	maze.create = function(data) {
-		if (data !== null) {
+		if (data) {
 			maze.data = JSON.parse(data);
 		} else {
 			maze.data = JSON.parse(maze.random());
