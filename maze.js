@@ -32,7 +32,7 @@ var maze = {
 
 	maze.random = function(size) {
 		var tiles = [];
-		if (size === null) {
+		if (!size) {
 			size = maze.randomInteger(5, 15);
 		}
 		console.log(size);
