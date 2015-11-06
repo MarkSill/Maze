@@ -94,5 +94,17 @@ var maze = {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	};
 
+	maze.move = function(x, y) {
+		var size = maze.data.tiles.length;
+		if (x >= 0 && y >= 0 && x < size && y < size && Math.absolute(x - maze.data.px) <= 1 && Math.absolute(y - maze.data.py) <= 1) {
+			if (maze.data.tiles[x][y] === 0) {
+				maze.data.px = x;
+				maze.data.py = y;
+				return true;
+			}
+		}
+		return false;
+	};
+
 	maze.data = maze.clear();
 })();
