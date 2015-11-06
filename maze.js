@@ -50,6 +50,8 @@ var maze = {
 		var data = maze.clear();
 		data.tiles = tiles;
 		data.seen = seen;
+		data.ex = maze.randomInteger(0, size-1);
+		data.ey = maze.randomInteger(0, size-1);
 		return JSON.stringify(data);
 	};
 
