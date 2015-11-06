@@ -1,3 +1,4 @@
 .tile {
 	background-color: gray;
+	display: inline-block;
 }
