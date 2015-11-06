@@ -66,9 +66,9 @@ var maze = {
 					cls += " player";
 				} else if (x === maze.data.ex && y === maze.data.ey) {
 					cls += " exit";
-				} else if (tile === false) {
+				} else if (tile === 0) {
 					cls += " floor";
-				} else {
+				} else if (tile === 1) {
 					cls += " wall";
 				}
 				tiles += "<span class='" + cls + "' style='top:" + x*50 + "px;left:" + y*50 + "px;'>" + tile + "</span>";
