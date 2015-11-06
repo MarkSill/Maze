@@ -96,10 +96,11 @@ var maze = {
 
 	maze.move = function(x, y) {
 		var size = maze.data.tiles.length;
-		if (x >= 0 && y >= 0 && x < size && y < size && Math.absolute(x - maze.data.px) <= 1 && Math.absolute(y - maze.data.py) <= 1) {
+		if (x >= 0 && y >= 0 && x < size && y < size && Math.abs(x - maze.data.px) <= 1 && Math.abs(y - maze.data.py) <= 1) {
 			if (maze.data.tiles[x][y] === 0) {
 				maze.data.px = x;
 				maze.data.py = y;
+				maze.update();
 				return true;
 			}
 		}
