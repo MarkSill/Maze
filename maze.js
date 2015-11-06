@@ -54,7 +54,7 @@ var maze = {
 		for (var x = 0; x < maze.data.tiles.length; x++) {
 			for (var y = 0; y < maze.data.tiles[x].length; y++) {
 				var tile = maze.data.tiles[x][y];
-				tiles += "<span class='tile' style='top:" + x*50 + "px;left:" + y*50 + ";'>" + tile + "</span>";
+				tiles += "<span class='tile' style='top:" + x*50 + "px;left:" + y*50 + "px;'>" + tile + "</span>";
 			}
 			tiles += "<br/>";
 		}
