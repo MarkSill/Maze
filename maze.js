@@ -35,9 +35,9 @@ var maze = {
 		if (size === null) {
 			size = maze.randomInteger(5, 15);
 		}
-		for (x = 0; x < size; x++) {
+		for (var x = 0; x < size; x++) {
 			var row = [];
-			for (y = 0; y < size; y++) {
+			for (var y = 0; y < size; y++) {
 				row[y] = maze.randomInteger(0, 1) === 1;
 			}
 			tiles[x] = row;
@@ -50,8 +50,8 @@ var maze = {
 	maze.update = function() {
 		//TODO: Change to canvas.
 		var tiles = "";
-		for (x = 0; x < maze.data.tiles.length; x++) {
-			for (y = 0; y < maze.data.tiles[x].length; y++) {
+		for (var x = 0; x < maze.data.tiles.length; x++) {
+			for (var y = 0; y < maze.data.tiles[x].length; y++) {
 				tiles += "<span class='tile'></span>";
 			}
 			tiles += "<br/>";
