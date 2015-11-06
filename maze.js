@@ -35,8 +35,7 @@ var maze = {
 		if (size === null) {
 			size = maze.randomInteger(5, 15);
 		}
-		var x;
-		for (x = 0; x < size; x++) {
+		for (var x = 0; x < size; x++) {
 			var row = [];
 			for (var y = 0; y < size; y++) {
 				row[y] = maze.randomInteger(0, 1) === 1;
