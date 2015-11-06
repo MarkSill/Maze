@@ -62,14 +62,16 @@ var maze = {
 			for (y = 0; y < maze.data.tiles[x].length; y++) {
 				var tile = maze.data.tiles[x][y];
 				var cls = "tile";
-				if (x === maze.data.px && y === maze.data.py) {
-					cls += " player";
-				} else if (x === maze.data.ex && y === maze.data.ey) {
-					cls += " exit";
-				} else if (tile === 0) {
-					cls += " floor";
-				} else if (tile === 1) {
-					cls += " wall";
+				if (maze.data.seen[x][y]) {
+					if (x === maze.data.px && y === maze.data.py) {
+						cls += " player";
+					} else if (x === maze.data.ex && y === maze.data.ey) {
+						cls += " exit";
+					} else if (tile === 0) {
+						cls += " floor";
+					} else if (tile === 1) {
+						cls += " wall";
+					}
 				}
 				tiles += "<span class='" + cls + "' style='top:" + x*50 + "px;left:" + y*50 + "px;'>" + tile + "</span>";
 			}
