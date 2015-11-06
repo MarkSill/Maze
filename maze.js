@@ -44,7 +44,7 @@ var maze = {
 		}
 		var data = maze.clear();
 		data.tiles = tiles;
-		console.log(data);
+		console.log(data, tiles);
 		return JSON.stringify(data);
 	};
 
