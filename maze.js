@@ -4,6 +4,8 @@ var maze = {
 		author: "Person",
 		px: 0,
 		py: 0,
+		ex: 0,
+		ey: 0,
 		tiles: []
 	}
 };
@@ -11,7 +13,11 @@ var maze = {
 	"use strict";
 
 	maze.create = function(data) {
-		maze.data = JSON.parse(data);
+		if (data !== null) {
+			maze.data = JSON.parse(data);
+		} else {
+
+		}
 		maze.update();
 	};
 
