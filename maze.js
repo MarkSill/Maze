@@ -35,7 +35,6 @@ var maze = {
 		if (!size) {
 			size = maze.randomInteger(5, 15);
 		}
-		console.log(size);
 		for (var x = 0; x < size; x++) {
 			var row = [];
 			for (var y = 0; y < size; y++) {
@@ -45,8 +44,6 @@ var maze = {
 		}
 		var data = maze.clear();
 		data.tiles = tiles;
-		console.log(data);
-		console.log(tiles);
 		return JSON.stringify(data);
 	};
 
