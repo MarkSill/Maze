@@ -9,7 +9,7 @@ var maze = {
 		if (data !== null) {
 			maze.data = JSON.parse(data);
 		} else {
-			maze.data = maze.random();
+			maze.data = JSON.parse(maze.random());
 		}
 		maze.update();
 	};
