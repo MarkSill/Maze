@@ -35,7 +35,7 @@ var maze = {
 		if (size === null) {
 			size = maze.randomInteger(5, 15);
 		}
-		console.log("Size: " + size);
+		console.log(size);
 		for (var x = 0; x < size; x++) {
 			var row = [];
 			for (var y = 0; y < size; y++) {
