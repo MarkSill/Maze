@@ -60,6 +60,14 @@ var maze = {
 		var tiles = "";
 		var amnt = 100 / maze.data.tiles.length;
 		var x, y;
+		for (x = maze.data.px - 1; x < maze.data.px + 2; x++) {
+			for (y = maze.data.py - 1; y < maze.data.py + 2; y++) {
+				if (x >= 0 && y >= 0 && x < maze.data.tiles.length && y < maze.data.tiles.length) {
+					maze.data.seen[x][y] = true;
+					console.log(x, y);
+				}
+			}
+		}
 		for (x = 0; x < maze.data.tiles.length; x++) {
 			for (y = 0; y < maze.data.tiles[x].length; y++) {
 				var tile = maze.data.tiles[x][y];
@@ -78,14 +86,6 @@ var maze = {
 				tiles += "<span class='" + cls + "' style='top:" + x*50 + "px;left:" + y*50 + "px;'></span>";
 			}
 			tiles += "<br/>";
-		}
-		for (x = maze.data.px - 1; x < maze.data.px + 2; x++) {
-			for (y = maze.data.py - 1; y < maze.data.py + 2; y++) {
-				if (x >= 0 && y >= 0 && x < maze.data.tiles.length && y < maze.data.tiles.length) {
-					maze.data.seen[x][y] = true;
-					console.log(x, y);
-				}
-			}
 		}
 		document.getElementById("maze").innerHTML = tiles;
 	};
