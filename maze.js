@@ -83,6 +83,7 @@ var maze = {
 			for (y = maze.data.py - 1; y < maze.data.py + 1; y++) {
 				if (x >= 0 && y >= 0 && x < maze.data.tiles.length && y < maze.data.tiles.length) {
 					maze.data.seen[x][y] = true;
+					console.log(x, y);
 				}
 			}
 		}
