@@ -79,8 +79,8 @@ var maze = {
 			}
 			tiles += "<br/>";
 		}
-		for (x = maze.data.px - 1; x < maze.data.px + 1; x++) {
-			for (y = maze.data.py - 1; y < maze.data.py + 1; y++) {
+		for (x = maze.data.px - 1; x < maze.data.px + 2; x++) {
+			for (y = maze.data.py - 1; y < maze.data.py + 2; y++) {
 				if (x >= 0 && y >= 0 && x < maze.data.tiles.length && y < maze.data.tiles.length) {
 					maze.data.seen[x][y] = true;
 					console.log(x, y);
