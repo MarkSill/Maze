@@ -75,7 +75,7 @@ var maze = {
 						cls += " wall";
 					}
 				}
-				tiles += "<span class='" + cls + "' style='top:" + x*50 + "px;left:" + y*50 + "px;'>" + tile + "</span>";
+				tiles += "<span class='" + cls + "' style='top:" + x*50 + "px;left:" + y*50 + "px;'></span>";
 			}
 			tiles += "<br/>";
 		}
